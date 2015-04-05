@@ -1,5 +1,5 @@
 # color-clicker-grid
-Deployed here: https://color-clicker.herokuapp.com/gallery :)
+Deployed here: https://color-clicker.herokuapp.com :)
 
 Home
 ![Home Screenshot](http://i.imgur.com/zzBnBJk.png)
