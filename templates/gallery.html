@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block head %}
+  <script type="text/jsx" src="../static/js/gallery.js"></script>
+{% endblock %}
+
+{% block body %}
+  <div id="boards-container">
+    {% for board in boards %}
+      <div class="gallery-item">
+        {{loop.index}}
+        <div id={{"board-%s" % loop.index }}>
+        <script type="text/jsx">
+          var colors = {{board.colors|tojson|safe}};
+          React.render(<BoardsContainer colors={colors}/>, document.getElementById('board-{{loop.index|safe}}'))
+        </script>
+        </div>
+      </div>
+    {% endfor %}  
+  </div>
+{% endblock %}
